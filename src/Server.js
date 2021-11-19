@@ -5,11 +5,11 @@ const SocketHandler = require("./network/raknet/SocketHandler");
 class Server {
 
 	constructor() {
-		this.maxPlayers = 10;
+		this.maxPlayers = 20;
 		this.players = [];
-		this.motd = "Nereus server";
+		this.motd = "Beta";
 		console.log("This server is running Nereus v" + Nereus.VERSION + " " + Nereus.CODENAME + " targeting API version " + Nereus.API + "!");
-		this.raknet = new SocketHandler(this, "0.0.0.0", 19132);
+		this.raknet = new SocketHandler(this, "192.168.254.84", 19132);
 		this.commandHandler = new CommandHandler(this);
 	}
 
